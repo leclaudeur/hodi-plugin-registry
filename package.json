@@ -1,0 +1,22 @@
+{
+  "name": "hodi-plugin-registry",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "check": "node --disable-warning=ExperimentalWarning scripts/check.ts",
+    "verify": "node --disable-warning=ExperimentalWarning scripts/verify.ts",
+    "test": "node --test --disable-warning=ExperimentalWarning test/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "ajv": "^8.20.0",
+    "prettier": "^3.9.10",
+    "tar": "^7.5.22",
+    "typescript": "~6.0.3"
+  }
+}
