@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Hodi plugin registry",
+  "description": "The plugins Hodi can list and install from Réglages › Plugins.",
+  "type": "object",
+  "required": ["plugins"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "plugins": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/plugin" }
+    }
+  },
+  "$defs": {
+    "plugin": {
+      "type": "object",
+      "required": ["id", "name", "description", "repo", "version", "api", "url", "sha256"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "description": "The id in the plugin's plugin.json.",
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]{1,31}$"
+        },
+        "name": {
+          "description": "The name in the plugin's plugin.json.",
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 60
+        },
+        "description": {
+          "description": "The description in the plugin's plugin.json, one or two sentences.",
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 280
+        },
+        "repo": {
+          "description": "The plugin's repository on GitHub, where its code and releases live.",
+          "type": "string",
+          "pattern": "^https://github\\.com/[A-Za-z0-9-]+/[A-Za-z0-9._-]+$"
+        },
+        "version": {
+          "description": "The version of the release below, as in its plugin.json.",
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+(?:-[0-9A-Za-z.-]+)?$"
+        },
+        "api": {
+          "description": "The plugin API version it was written for, as in its plugin.json.",
+          "type": "integer",
+          "minimum": 1
+        },
+        "url": {
+          "description": "The .hodi-plugin attached to the release v<version> of the repository.",
+          "type": "string",
+          "pattern": "^https://github\\.com/[A-Za-z0-9-]+/[A-Za-z0-9._-]+/releases/download/v[^/]+/[^/]+\\.hodi-plugin$"
+        },
+        "sha256": {
+          "description": "The SHA-256 of that file, in lowercase hex.",
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    }
+  }
+}
