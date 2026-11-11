@@ -45,7 +45,16 @@ It becomes:
   "id": "diagnostic",
   "name": "Diagnostic",
   "description": "Signale ce que le lecteur rate sur un article, et prépare un pack pour le corriger.",
-  "texts": { "en": { "description": "Reports what the reader misses on an article, and builds a pack to fix it." } },
+  "texts": {
+    "en": {
+      "name": "Diagnostic",
+      "description": "Reports what the reader misses on an article, and builds a pack to fix it."
+    },
+    "fr": {
+      "name": "Diagnostic",
+      "description": "Signale ce que le lecteur rate sur un article, et prépare un pack pour le corriger."
+    }
+  },
   "repo": "https://github.com/leclaudeur/hodi-plugin-diagnostic",
   "version": "x.x.x",
   "api": 2,
