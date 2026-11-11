@@ -68,8 +68,7 @@ npm run check     # the format of plugins.json
 npm run verify    # downloads each release, checks its hash and its plugin.json
 ```
 
-A new version of a plugin is a new pull request, which updates `version`, `url` and `sha256`. Only Hodi's maintainer
-merges.
+A new version of a plugin is a new pull request. Only Hodi's maintainer merges.
 
 ## License
 
