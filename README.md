@@ -2,7 +2,7 @@
 
 # 📚 Hodi plugin registry
 
-**The list of [Hodi](https://github.com/leclaudeur/hodi) plugins, ready to install in one click.**<br>
+**The list of [Hodi](https://github.com/leclaudeur/hodi) plugins, one entry each.**<br>
 One file, `plugins.json`. Each plugin keeps its code and releases in its own repository.
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
@@ -22,8 +22,8 @@ Hodi will list these plugins in _Server › Plugins_. To install one, it:
 The list is reviewed, not endorsed. The signature, not the list, says who made a plugin.
 
 > [!NOTE]
-> Hodi doesn't read this list yet: Hodi's side comes later. Until then, install a plugin from its `.hodi-plugin` file
-> with **Add a plugin**, the way Hodi's own docs describe it.
+> Hodi doesn't read this list yet, and Hodi's side comes later. Until then, install a plugin from its `.hodi-plugin` file
+> with **Add a plugin** in _Server › Plugins_, the same way for every plugin.
 
 To make your own plugin, start from the [plugin template](https://github.com/leclaudeur/hodi-plugin-template).
 
@@ -62,8 +62,7 @@ What you write:
 What `npm run index` fills:
 
 - `id`, `name`, `description` and `api`: from the package's `plugin.json`.
-- `texts`: the name and description in other languages, from `manifest` in the package's `locales/<language>.json`.
-  Left out when there are none.
+- `texts`: the name and description in other languages, from `manifest` in `locales/<language>.json`. Left out when there are none.
 - `url`: the `.hodi-plugin` file of the release.
 - `sha256`: the SHA-256 of that file. Once merged, it pins the file: if the release is replaced, Hodi refuses it.
 
@@ -75,8 +74,7 @@ What `npm run index` fills:
 ## Add or update a plugin
 
 1. Publish a release `v<version>` of your plugin, with its `.hodi-plugin` file attached.
-2. In `plugins.json`, add `{ "repo": "…", "version": "…" }` for a new plugin, or change `version` in your entry for a
-   new release.
+2. In `plugins.json`, add `{ "repo": "…", "version": "…" }` for a new plugin, or change `version` for a new release.
 3. Fill the entry, then run the checks:
 
 ```bash
