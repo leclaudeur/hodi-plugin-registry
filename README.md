@@ -23,7 +23,7 @@ The list is reviewed, not endorsed. The signature, not the list, says who made a
 
 > [!NOTE]
 > Hodi doesn't read this list yet: the list is empty, and Hodi's side comes later. Until then, install a plugin from
-> its file with **Add a plugin**.
+> its `.hodi-plugin` file with **Add a plugin**, the way Hodi's own docs describe it.
 
 To make your own plugin, start from the [plugin template](https://github.com/leclaudeur/hodi-plugin-template).
 
@@ -35,25 +35,23 @@ To make your own plugin, start from the [plugin template](https://github.com/lec
   "name": "Diagnostic",
   "description": "Signale ce que le lecteur rate sur un article, et prépare un pack pour le corriger.",
   "repo": "https://github.com/leclaudeur/hodi-plugin-diagnostic",
-  "version": "0.2.0",
+  "version": "x.x.x",
   "api": 2,
-  "url": "https://github.com/leclaudeur/hodi-plugin-diagnostic/releases/download/v0.2.0/diagnostic-0.2.0.hodi-plugin",
+  "url": "https://github.com/leclaudeur/hodi-plugin-diagnostic/releases/download/vx.x.x/diagnostic-x.x.x.hodi-plugin",
   "sha256": "…"
 }
 ```
 
-| Field         | What it says                                                                 |
-| ------------- | ---------------------------------------------------------------------------- |
-| `id`          | The plugin's id, as in its `plugin.json`.                                    |
-| `name`        | Its name, as in its `plugin.json`.                                           |
-| `description` | Its description, as in its `plugin.json`.                                    |
-| `repo`        | Its repository on GitHub.                                                    |
-| `version`     | The version of the release below, as in its `plugin.json`.                   |
-| `api`         | The plugin API it was written for. Hodi hides plugins it cannot run.         |
-| `url`         | The `.hodi-plugin` file attached to the release `v<version>`.                |
-| `sha256`      | The SHA-256 of that file, from `sha256sum <file>` or `shasum -a 256 <file>`. |
+- `id`: the plugin's id, as in its `plugin.json`.
+- `name`: its name, as in its `plugin.json`.
+- `description`: its description, as in its `plugin.json`.
+- `repo`: its repository on GitHub.
+- `version`: the version of the release below, as in its `plugin.json`.
+- `api`: the plugin API it was written for. Hodi hides plugins it cannot run.
+- `url`: the `.hodi-plugin` file attached to the release `v<version>`.
+- `sha256`: the SHA-256 of that file, from `sha256sum <file>` or `shasum -a 256 <file>`.
 
-The full format is in [plugins.schema.json](plugins.schema.json).
+`x.x.x` stands for the real version, so this example never goes stale. The full format is in [plugins.schema.json](plugins.schema.json).
 
 > [!IMPORTANT]
 > The repository and its release must be public. Hodi downloads the file without signing in.
