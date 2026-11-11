@@ -70,10 +70,10 @@ What you write:
 
 What `npm run index` fills:
 
-- `id`, `name`, `description` and `api`: from the package's `plugin.json`.
-- `texts`: the name and description in other languages, from `manifest` in `locales/<language>.json`. Left out when there are none.
+- `id`, `name`, `description` and `api`: from `plugin.json`.
+- `texts`: other-language names, from `manifest` in `locales/<language>.json`; left out if none.
 - `url`: the `.hodi-plugin` file of the release.
-- `sha256`: the SHA-256 of that file. Once merged, it pins the file: if the release is replaced, Hodi refuses it.
+- `sha256`: the SHA-256 of that file. Once merged, a replaced release is refused.
 
 `x.x.x` stands for the real version, so this example never goes stale. The full format is in [plugins.schema.json](plugins.schema.json).
 
