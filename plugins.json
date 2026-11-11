@@ -1,4 +1,15 @@
 {
   "$schema": "./plugins.schema.json",
-  "plugins": []
+  "plugins": [
+    {
+      "id": "diagnostic",
+      "name": "Diagnostic",
+      "description": "Signale ce que le lecteur rate sur un article, et prépare un pack pour le corriger.",
+      "repo": "https://github.com/leclaudeur/hodi-plugin-diagnostic",
+      "version": "0.2.1",
+      "api": 2,
+      "url": "https://github.com/leclaudeur/hodi-plugin-diagnostic/releases/download/v0.2.1/diagnostic-0.2.1.hodi-plugin",
+      "sha256": "4d3f91f3e6889d9d4dbeaae825cf3a68fc07bdd4ac35fd08b1567ef0b2b24924"
+    }
+  ]
 }

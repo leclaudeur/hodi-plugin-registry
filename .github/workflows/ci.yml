@@ -24,3 +24,5 @@ jobs:
       - run: npm run check
       # Downloads every listed release, as Hodi would, and checks its hash and manifest.
       - run: npm run verify
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
