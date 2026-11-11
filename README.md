@@ -45,7 +45,7 @@ It becomes:
   "id": "diagnostic",
   "name": "Diagnostic",
   "description": "Signale ce que le lecteur rate sur un article, et prépare un pack pour le corriger.",
-  "texts": {
+  "translations": {
     "en": {
       "name": "Diagnostic",
       "description": "Reports what the reader misses on an article, and builds a pack to fix it."
@@ -71,7 +71,7 @@ What you write:
 What `npm run index` fills:
 
 - `id`, `name`, `description` and `api`: from the package's `plugin.json`.
-- `texts`: the name and description in other languages, from `manifest` in `locales/<language>.json`. Left out when there are none.
+- `translations`: the name and description in each language, from `manifest` in `locales/<language>.json`. Left out when there are none.
 - `url`: the `.hodi-plugin` file of the release.
 - `sha256`: the SHA-256 of that file. Once merged, it pins the file: if the release is replaced, Hodi refuses it.
 

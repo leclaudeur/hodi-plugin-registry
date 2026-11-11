@@ -41,7 +41,7 @@ const github =
     return new Response('not found', { status: 404 })
   }
 
-test('fills an entry from its release, with the texts of its locales', async () => {
+test('fills an entry from its release, with the translations of its locales', async () => {
   const bytes = await packageOf({
     'plugin.json': JSON.stringify(MANIFEST),
     'locales/fr.json': '{"page":{"title":"Diagnostic"}}',
@@ -50,7 +50,7 @@ test('fills an entry from its release, with the texts of its locales', async () 
   const sha256 = createHash('sha256').update(bytes).digest('hex')
   assert.deepEqual(await complete({ repo: REPO, version: '0.2.0' }, github(bytes)), {
     ...MANIFEST,
-    texts: { en: { description: 'Reports what the reader misses.' } },
+    translations: { en: { description: 'Reports what the reader misses.' } },
     repo: REPO,
     version: '0.2.0',
     url: URL_020,
@@ -60,9 +60,9 @@ test('fills an entry from its release, with the texts of its locales', async () 
   assert.equal((await complete({ repo: REPO, version: '0.2.0', sha256 }, github(bytes))).sha256, sha256)
 })
 
-test('leaves texts out when the locales give none', async () => {
+test('leaves translations out when the locales give none', async () => {
   const bytes = await packageOf({ 'plugin.json': JSON.stringify(MANIFEST) })
-  assert.equal('texts' in (await complete({ repo: REPO, version: '0.2.0' }, github(bytes))), false)
+  assert.equal('translations' in (await complete({ repo: REPO, version: '0.2.0' }, github(bytes))), false)
 })
 
 test('refuses a replaced file, a wrong version, a release without one package and a private one', async () => {
