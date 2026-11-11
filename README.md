@@ -45,7 +45,7 @@ It becomes:
   "id": "diagnostic",
   "name": "Diagnostic",
   "description": "Signale ce que le lecteur rate sur un article, et prépare un pack pour le corriger.",
-  "texts": {
+  "translations": {
     "en": {
       "name": "Diagnostic",
       "description": "Reports what the reader misses on an article, and builds a pack to fix it."
@@ -71,7 +71,7 @@ What you write:
 What the index script fills:
 
 - `id`, `name`, `description` and `api`: from the plugin's manifest.
-- `texts`: the name and description in other languages, when the plugin has them.
+- `translations`: the name and description in other languages, when the plugin has them.
 - `url`: the plugin file of the release.
 - `sha256`: the hash of that file. Once merged, a replaced release is refused.
 
