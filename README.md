@@ -66,14 +66,14 @@ It becomes:
 What you write:
 
 - `repo`: the plugin's repository on GitHub.
-- `version`: the release to list, `v<version>` on GitHub, with one `.hodi-plugin` file attached.
+- `version`: the release to list, with its plugin file attached.
 
-What `npm run index` fills:
+What the index script fills:
 
-- `id`, `name`, `description` and `api`: from `plugin.json`.
-- `texts`: other-language names, from `manifest` in `locales/<language>.json`; left out if none.
-- `url`: the `.hodi-plugin` file of the release.
-- `sha256`: the SHA-256 of that file. Once merged, a replaced release is refused.
+- `id`, `name`, `description` and `api`: from the plugin's manifest.
+- `texts`: the name and description in other languages, when the plugin has them.
+- `url`: the plugin file of the release.
+- `sha256`: the hash of that file. Once merged, a replaced release is refused.
 
 `x.x.x` stands for the real version, so this example never goes stale. The full format is in [plugins.schema.json](plugins.schema.json).
 
