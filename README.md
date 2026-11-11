@@ -45,7 +45,7 @@ It becomes:
   "id": "diagnostic",
   "name": "Diagnostic",
   "description": "Signale ce que le lecteur rate sur un article, et prépare un pack pour le corriger.",
-  "texts": {
+  "translations": {
     "en": {
       "name": "Diagnostic",
       "description": "Reports what the reader misses on an article, and builds a pack to fix it."
@@ -66,14 +66,14 @@ It becomes:
 What you write:
 
 - `repo`: the plugin's repository on GitHub.
-- `version`: the release to list, `v<version>` on GitHub, with one `.hodi-plugin` file attached.
+- `version`: the release to list, with its plugin file attached.
 
-What `npm run index` fills:
+What the index script fills:
 
-- `id`, `name`, `description` and `api`: from the package's `plugin.json`.
-- `texts`: the name and description in other languages, from `manifest` in `locales/<language>.json`. Left out when there are none.
-- `url`: the `.hodi-plugin` file of the release.
-- `sha256`: the SHA-256 of that file. Once merged, it pins the file: if the release is replaced, Hodi refuses it.
+- `id`, `name`, `description` and `api`: from the plugin's manifest.
+- `translations`: the name and description in other languages, when the plugin has them.
+- `url`: the plugin file of the release.
+- `sha256`: the hash of that file. Once merged, a replaced release is refused.
 
 `x.x.x` stands for the real version, so this example never goes stale. The full format is in [plugins.schema.json](plugins.schema.json).
 
@@ -95,8 +95,7 @@ npm run verify    # downloads each release again and checks its entry is what in
 
 4. Open a pull request with the result. CI runs `check` and `verify` again: an entry changed by hand fails.
 
-Without a token, GitHub answers 60 requests an hour from one address. If `index` says GitHub refused the request, set
-`GITHUB_TOKEN` to a [personal access token](https://github.com/settings/tokens) with no scope and run it again.
+Without a token, GitHub answers only 60 requests an hour from one address. If the script stops because GitHub refused a request, set `GITHUB_TOKEN` to a [personal access token](https://github.com/settings/tokens) with no scope and run it again.
 
 A new version of a plugin is a new pull request. Only Hodi's maintainer merges.
 
