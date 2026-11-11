@@ -35,8 +35,8 @@
           "minLength": 1,
           "maxLength": 280
         },
-        "texts": {
-          "description": "Its name and description in other languages: manifest.name and manifest.description in its locales/<language>.json.",
+        "translations": {
+          "description": "Its name and description in each language: manifest.name and manifest.description in its locales/<language>.json.",
           "type": "object",
           "propertyNames": { "pattern": "^[a-z]{2}$" },
           "additionalProperties": {

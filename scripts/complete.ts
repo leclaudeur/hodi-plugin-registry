@@ -56,7 +56,7 @@ export const complete = async (seed: Seed, fetcher: typeof fetch = fetch): Promi
     id: described.id as string,
     name: described.name as string,
     description: described.description as string,
-    ...(Object.keys(described.texts).length > 0 && { texts: described.texts }),
+    ...(Object.keys(described.translations).length > 0 && { translations: described.translations }),
     repo: seed.repo,
     version: seed.version,
     api: described.api as number,
