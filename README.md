@@ -95,8 +95,7 @@ npm run verify    # downloads each release again and checks its entry is what in
 
 4. Open a pull request with the result. CI runs `check` and `verify` again: an entry changed by hand fails.
 
-Without a token, GitHub answers 60 requests an hour from one address.\
-If `index` says GitHub refused, set `GITHUB_TOKEN` to a [personal access token](https://github.com/settings/tokens) with no scope and retry.
+Without a token, GitHub answers only 60 requests an hour from one address. If the script stops because GitHub refused a request, set `GITHUB_TOKEN` to a [personal access token](https://github.com/settings/tokens) with no scope and run it again.
 
 A new version of a plugin is a new pull request. Only Hodi's maintainer merges.
 
