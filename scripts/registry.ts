@@ -5,6 +5,8 @@ export interface Entry {
   id: string
   name: string
   description: string
+  // Its name and description in other languages, from its locales.
+  texts?: Record<string, { name?: string; description?: string }>
   repo: string
   version: string
   api: number

@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "check": "node --disable-warning=ExperimentalWarning scripts/check.ts",
+    "index": "node --disable-warning=ExperimentalWarning scripts/index.ts",
     "verify": "node --disable-warning=ExperimentalWarning scripts/verify.ts",
     "test": "node --test --disable-warning=ExperimentalWarning test/*.test.ts",
     "typecheck": "tsc --noEmit",
