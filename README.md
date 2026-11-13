@@ -6,8 +6,9 @@
 One file, `plugins.json`. Each plugin keeps its code and releases in its own repository.
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![Patreon](https://img.shields.io/badge/Patreon-Le%20Claudeur-F96854?logo=patreon&logoColor=white)](https://www.patreon.com/cw/LeClaudeur)
 
-[**How Hodi uses it**](#how-hodi-uses-it) · [**An entry**](#an-entry) · [**Add a plugin**](#add-or-update-a-plugin)
+[**How Hodi uses it**](#how-hodi-uses-it) · [**An entry**](#an-entry) · [**Add a plugin**](#add-or-update-a-plugin) · [**Sponsor**](#sponsor)
 
 </div>
 
@@ -98,6 +99,13 @@ npm run verify    # downloads each release again and checks its entry is what in
 Without a token, GitHub answers only 60 requests an hour from one address. If the script stops because GitHub refused a request, set `GITHUB_TOKEN` to a [personal access token](https://github.com/settings/tokens) with no scope and run it again.
 
 A new version of a plugin is a new pull request. Only Hodi's maintainer merges.
+
+## Sponsor
+
+Hodi is free and open source, with no ads and nothing to pay.\
+If it is useful to you, you can support its work on Patreon.
+
+[![Support Hodi on Patreon](https://img.shields.io/badge/Support%20Hodi-Patreon-F96854?style=for-the-badge&logo=patreon&logoColor=white)](https://www.patreon.com/cw/LeClaudeur)
 
 ## License
 
