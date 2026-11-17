@@ -16,8 +16,8 @@
   "devDependencies": {
     "@types/node": "^24.19.2",
     "ajv": "^8.20.0",
-    "prettier": "^3.9.10",
-    "tar": "^7.5.22",
+    "prettier": "^3.10.1",
+    "tar": "^7.5.23",
     "typescript": "~6.0.3"
   }
 }
