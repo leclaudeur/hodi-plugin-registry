@@ -16,10 +16,10 @@
         }
       },
       "repo": "https://github.com/leclaudeur/hodi-plugin-diagnostic",
-      "version": "1.0.0-beta.1",
+      "version": "1.0.0-beta.2",
       "api": 2,
-      "url": "https://github.com/leclaudeur/hodi-plugin-diagnostic/releases/download/v1.0.0-beta.1/diagnostic-1.0.0-beta.1.hodi-plugin",
-      "sha256": "54cbb8c2452caff432f7b6268f18d149f7ae7d2a286e1936171f4e39b138e252"
+      "url": "https://github.com/leclaudeur/hodi-plugin-diagnostic/releases/download/v1.0.0-beta.2/diagnostic-1.0.0-beta.2.hodi-plugin",
+      "sha256": "1a77083ab7410ce1daf85da45321472135aabae23cdf1e2e444a7f9f2c03ff4b"
     }
   ]
 }
